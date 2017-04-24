@@ -10,39 +10,43 @@
 
 <body>
 
-    <header class="header">
-        <h1 class="title">Bloc It Off</h1>
-    </header>
-    <div class="box">
-        <ui-view></ui-view>
-    </div>
+    <body>
+        <header class="header">
+            <h1 class="title">Bloc It Off</h1>
+        </header>
+        <a ui-sref="active">Active Tasks</a>
+        <a ui-sref="inactive">History</a>
+
+        <div class="box">
+            <ui-view></ui-view>
+        </div>
 
 
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-    <!-- UI Router -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyDkVSAVM1E0JEzeSXQm7j4fhoQDCJ3zHKs",
-            authDomain: "blocitoff-84bff.firebaseapp.com",
-            databaseURL: "https://blocitoff-84bff.firebaseio.com",
-            projectId: "blocitoff-84bff",
-            storageBucket: "blocitoff-84bff.appspot.com",
-            messagingSenderId: "750991435681"
-        };
-        firebase.initializeApp(config);
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+        <!-- UI Router -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDkVSAVM1E0JEzeSXQm7j4fhoQDCJ3zHKs",
+                authDomain: "blocitoff-84bff.firebaseapp.com",
+                databaseURL: "https://blocitoff-84bff.firebaseio.com",
+                projectId: "blocitoff-84bff",
+                storageBucket: "blocitoff-84bff.appspot.com",
+                messagingSenderId: "750991435681"
+            };
+            firebase.initializeApp(config);
 
-    </script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="/scripts/app.js"></script>
-    <script src="/scripts/controllers/ActiveCtrl.js"></script>
-    <script src="/scripts/controllers/InactiveCtrl.js"></script>
-</body>
+        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/controllers/ActiveCtrl.js"></script>
+        <script src="/scripts/controllers/InactiveCtrl.js"></script>
+    </body>
 
 </html>

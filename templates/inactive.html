@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<h1>Inactive View</h1>
+<h1>Inactive Tasks</h1>
 
 <section class="inactive" ng-controller="InactiveCtrl as inactive">
-    <div class="tasks-active">
-        <table class="tasks-active-table">
-            <tr class="tasks-active-row" ng-repeat="task in active.tasks">
-                <td class="tasks-active-data"> {{task.description | json }} </td>
-                <th>task</th>
-                <th>priority</th>
-            </tr>
-            <tr>
+    <div class="tasks-inactive">
+        <table class="table-task">
+            <tr id="table-header">
                 <th>Task</th>
                 <th>Priority</th>
+                <th>Days Left</th>
+                <th>Task Status</th>
+                <th>Completed</th>
+            </tr>
+
+            <tr ng-repeat="task in tasks" ng-hide="task.status == 'active'">
+                <td> {{ task.text }} </td>
+                <td id="task-priority"> {{ task.priority }} </td>
+                <td> {{ elapsedTime(task) }} </td>
+                <td> {{ task.status }} </td>
+                <td><input type="checkbox" ng-model='task.status' ng-click='completeTask(task)'></td>
             </tr>
         </table>
-    </div>
-    <div>
-        <input type="text" id="txtNewMessage" class="form-control" placeholder="new task">
-        <input type="text" id="txtNewMessagePriority" class="form-control" placeholder="Priority">
-
     </div>
 </section>
