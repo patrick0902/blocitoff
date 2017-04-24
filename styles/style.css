@@ -1,47 +1,46 @@
 header {
-	color: rgb(0, 0, 0);
-	background-color: rgb(193, 193, 189);
+    color: rgb(0, 0, 0);
+    background-color: rgb(193, 193, 189);
 }
 
 header h1 {
-	margin: 0;
-	padding: 1em;
-	font-size: 2em;
+    margin: 0;
+    padding: 1em;
+    font-size: 2em;
 }
 
 .box {
     vertical-align: middle;
     background-color: lightgray;
-    position: fixed;
-    left: 50%;
+    position: relative;
+    left: 20%;
     min-height: 500px;
     width: 600px;
-    margin-left: -300px;
 }
 
 table {
-	width: 100%;
+    width: 100%;
 }
 
 tr {
-	height: 3em;
-	text-indent: 2em;
+    height: 3em;
+    text-indent: 1em;
 }
 
 td {
-	width: 50%;
+    width: 30%;
 }
 
 table tr:nth-child(odd) {
-    background-color: rgba(241, 248, 249,.7);
-}
-table tr:nth-child(even) {
-    background-color: rgba(249, 248, 249,.7);
+    background-color: rgba(241, 248, 249, .7);
 }
 
+table tr:nth-child(even) {
+    background-color: rgba(249, 248, 249, .7);
+}
 
 .task-entry {
-	width: 100%;
+    width: 100%;
 }
 
 #activeTasks {
@@ -49,51 +48,49 @@ table tr:nth-child(even) {
 }
 
 .form-input-description {
-	float: left;
+    float: left;
     width: 50%;
-	height: 3em;
-	text-indent: 2em;
-	border: none;
-	display: inline-block;
-	background-color: rgb(241, 241, 241);
-
+    height: 3em;
+    text-indent: 2em;
+    border: none;
+    display: inline-block;
+    background-color: rgb(241, 241, 241);
 }
 
 .input {
-	float: left;
-	width: 50%;
+    float: left;
+    width: 50%;
     height: 3em;
-	background-color: rgb(241, 241, 241);
+    background-color: rgb(241, 241, 241);
 }
 
 .button {
-	float: left;
-	height: 3em;
-	background-color: rgb(56, 56, 55);
-	border: none;
-	color: rgb(241, 241, 241);
-	cursor: pointer;
-	text-align: center;
-	width: 25%;
+    float: left;
+    height: 3em;
+    background-color: rgb(56, 56, 55);
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
+    text-align: center;
+    width: 25%;
     display: inline-block;
 }
 
 .priority-levels {
-	width: 24%;
+    width: 24%;
     float: left;
-	height: 3em;
-	background-color: rgb(241, 241, 241);
-	border: none;
-	color: rgb(56, 56, 55);
-	cursor: pointer;
-	text-align: center;
+    height: 3em;
+    background-color: rgb(241, 241, 241);
+    border: none;
+    color: rgb(56, 56, 55);
+    cursor: pointer;
+    text-align: center;
     display: inline-block;
-
 }
 
 .tasks-inactive td {
-	background-color: rgb(241, 241, 241);
-	font-size: 1em;
-	padding: 1em;
-	text-decoration: line-through;
+    background-color: rgb(241, 241, 241);
+    font-size: 1em;
+    padding: 1em;
+    text-decoration: line-through;
 }

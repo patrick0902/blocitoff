@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<h1>Inactive Tasks</h1>
+<h1>History</h1>
+<a ui-sref="active">Active Tasks</a>
+<a ui-sref="inactive">History</a>
 
 <section class="inactive" ng-controller="InactiveCtrl as inactive">
     <div class="tasks-inactive">
@@ -9,7 +11,6 @@
                 <th>Priority</th>
                 <th>Days Left</th>
                 <th>Task Status</th>
-                <th>Completed</th>
             </tr>
 
             <tr ng-repeat="task in tasks" ng-hide="task.status == 'active'">
@@ -17,7 +18,6 @@
                 <td id="task-priority"> {{ task.priority }} </td>
                 <td> {{ elapsedTime(task) }} </td>
                 <td> {{ task.status }} </td>
-                <td><input type="checkbox" ng-model='task.status' ng-click='completeTask(task)'></td>
             </tr>
         </table>
     </div>
