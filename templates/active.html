@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<section class="task-entry">
+        <form ng-submit="addTask()">
+            <div class="add-task-form">
+                <div >
+                    <input type="text"  ng-model="newTaskText" class="form-input-description" placeholder="Enter New Task">
+                    <select class="priority-levels" ng-model="newTaskPriority">
+                        <option value="" disabled selected>Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <button type="submit" class="button">Add</button>
+                </div>
+            </div>
+        </form>
+</section>
+<section class="activeTasks" ng-controller="ActiveCtrl as active">
+    <div class="tasks-active">
+        <table class="table-task">
+        <tr id="table-header">
+            <th>Task</th>
+            <th>Priority</th>
+        </tr>
+        <tr ng-repeat="task in tasks">
+            <td> {{ task.text }} </td>
+            <td id="task-priority"> {{ task.priority }} </td>
+        </tr>
+    </table>
+
+    </div>
+
+</section>

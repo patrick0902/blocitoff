@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<h1>Inactive View</h1>
+
+<section class="inactive" ng-controller="InactiveCtrl as inactive">
+    <div class="tasks-active">
+        <table class="tasks-active-table">
+            <tr class="tasks-active-row" ng-repeat="task in active.tasks">
+                <td class="tasks-active-data"> {{task.description | json }} </td>
+                <th>task</th>
+                <th>priority</th>
+            </tr>
+            <tr>
+                <th>Task</th>
+                <th>Priority</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <input type="text" id="txtNewMessage" class="form-control" placeholder="new task">
+        <input type="text" id="txtNewMessagePriority" class="form-control" placeholder="Priority">
+
+    </div>
+</section>
